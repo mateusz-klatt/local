@@ -49,10 +49,9 @@ src_install() {
 
 	insinto "${dir}"
 	doins -r *
-	#fperms 755 "${dir}"/bin/*
-	#fperms 755 "${dir}"/jbr/bin/*
-	#fperms 755 "${dir}"/jbr/lib/*
-	#fperms 755 "${dir}"/plugins/go/lib/dlv/linux/dlv
+	fperms 755 "${dir}"/bin/*
+	fperms 755 "${dir}"/jbr/bin/*
+	fperms 755 "${dir}"/jbr/lib/*
 
 	make_wrapper "${PN}" "${dir}/bin/${PN}.sh"
 	newicon "bin/${PN}.png" "${PN}.png"
