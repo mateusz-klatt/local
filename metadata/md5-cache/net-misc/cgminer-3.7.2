@@ -1,0 +1,16 @@
+BDEPEND=virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.5:1.16 ) >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+DEFINED_PHASES=configure install prepare
+DEPEND=net-misc/curl >=dev-libs/jansson-2.6:= virtual/libusb:1[udev] ncurses? ( sys-libs/ncurses:0= ) udev? ( virtual/libudev )
+DESCRIPTION=Bitcoin CPU/GPU/FPGA/ASIC miner in C
+EAPI=7
+HOMEPAGE=https://bitcointalk.org/?topic=28402.msg357369 https://github.com/ckolivas/cgminer
+INHERIT=autotools flag-o-matic toolchain-funcs
+IUSE=doc examples udev hardened ncurses ants1 ants2 ants3 avalon avalon2 avalon4 avalon7 avalon-miner bab bflsc bitforce bitfury bitmine_A1 blockerupter cointerra drillbit hashfast hashratio icarus klondike knc minion modminer sp10 sp30 opencl
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-3
+RDEPEND=net-misc/curl >=dev-libs/jansson-2.6:= virtual/libusb:1[udev] ncurses? ( sys-libs/ncurses:0= ) udev? ( virtual/libudev )
+REQUIRED_USE=|| ( ants1 ants2 ants3 avalon avalon2 avalon4 avalon7 avalon-miner bab bflsc bitforce bitfury bitmine_A1 blockerupter cointerra drillbit hashfast hashratio icarus klondike knc minion modminer sp10 sp30 opencl )
+SLOT=0
+SRC_URI=https://github.com/ckolivas/cgminer/archive/refs/tags/v3.7.2.tar.gz
+_eclasses_=autotools	9e6965bfaa00f52cc61e0d4bc44c87b3	edos2unix	33e347e171066657f91f8b0c72ec8773	eutils	23cb2d46c80c12aa8b25973b4cdcb257	flag-o-matic	929e29d009c20f55b45c96866ebf47fe	gnuconfig	b6b3e92f8b8c996400074b5f61a59256	libtool	241a8f577b9781a42a7421e53448a44e	multilib	5ca4e49abed8e3a2f7b56920eadee157	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	toolchain-funcs	1542e649be915f43f6908a9e93909961	wrapper	4a1902f969e5718126434fc35f3a0d9c
+_md5_=9e2c59175242c244e0af15914b0e6b54
